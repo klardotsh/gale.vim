@@ -17,11 +17,12 @@ if exists("b:current_syntax")
 	finish
 endif
 
-syntax region GaleCommentLine start="#" end="$" contains=GaleTodo,GaleFixMe
+syntax match GaleComment "\S*" contained containedin=GaleCommentRegion contains=GaleTodo,GaleFixMe
+syntax region GaleCommentRegion matchgroup=GaleComment start="{" end="}" fold transparent 
 syntax keyword GaleTodo contained TODO
 syntax keyword GaleFixMe contained FIXME
 
-highlight default link GaleCommentLine Comment
+highlight default link GaleComment Comment
 highlight default link GaleTodo Todo
 highlight default link GaleFixMe Todo
 
