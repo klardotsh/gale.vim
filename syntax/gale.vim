@@ -17,7 +17,7 @@ if exists("b:current_syntax")
 	finish
 endif
 
-syntax region GaleCommentLine start="//" end="$" contains=GaleTodo,GaleFixMe
+syntax region GaleCommentLine start="#" end="$" contains=GaleTodo,GaleFixMe
 syntax keyword GaleTodo contained TODO
 syntax keyword GaleFixMe contained FIXME
 
