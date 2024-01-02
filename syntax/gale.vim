@@ -18,7 +18,7 @@ if exists("b:current_syntax")
 endif
 
 syntax match GaleComment "\S*" contained containedin=GaleCommentRegion contains=GaleTodo,GaleFixMe
-syntax region GaleCommentRegion matchgroup=GaleComment start="{" end="}" fold transparent 
+syntax region GaleCommentRegion matchgroup=GaleComment start=";" end="$" fold transparent oneline
 syntax keyword GaleTodo contained TODO
 syntax keyword GaleFixMe contained FIXME
 
