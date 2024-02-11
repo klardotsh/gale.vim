@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.gale setfiletype gale
+au BufRead,BufNewFile *.gale,*.wlw setfiletype gale
